@@ -19,7 +19,7 @@ par(mfcol=c(2,2), cex=0.5)
 
 ## Create the Global Active Power plot
 with(data, plot(dandt, Global_active_power, type="n", xlab="", 
-                ylab="Global Active Power (kilowatts)"))
+                ylab="Global Active Power"))
 with(data, lines(dandt, Global_active_power, type="l"))
 
 ## Create the sub-metering plots
@@ -28,7 +28,7 @@ with(data, plot(dandt, Sub_metering_1, type="n", xlab="",
 with(data, lines(dandt, Sub_metering_1, type="l", col="black"));
 with(data, lines(dandt, Sub_metering_2, type="l", col="red"));
 with(data, lines(dandt, Sub_metering_3, type="l", col="blue"));
-legend("topright", lty=c(1,1), col=c("black","red","blue"), 
+legend("topright", bty="n", lty=c(1,1), col=c("black","red","blue"), 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 ## Create the voltage plot
